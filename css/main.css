@@ -1,0 +1,189 @@
+html {
+  background-color: #e2e2e2;
+}
+
+body {
+  margin: 2em auto;
+  max-width: 35em;
+
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+section {
+    padding: 4em 1em;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+
+section:nth-child(5) {
+  border: 0;
+}
+
+div {
+  position: absolute;
+  right: 1em;
+  top: 0;
+}
+
+.box {
+    height: 100px;
+    top: calc(50% - 50px);
+    width: 200px;
+    opacity: 1;
+    background-color: limegreen;
+    transition: all 200ms linear;
+}
+
+.box-show {
+    max-height: 10em;
+    opacity: 0;
+}
+
+.diamond {
+    height: 80px;
+    right: 2em;
+    top: calc(50% - 40px);
+    width: 80px;
+    background-color: hotpink;
+    transform: rotate(45deg);
+    transition: all 200ms linear;
+}
+
+.diamond-move {
+    right: -200px;
+}
+
+.panel {
+    width: 250px;
+    top: 50%;
+    max-height: 10em;
+    background-color: yellow;
+    transform: translateY(-50%);
+    color: darkgoldenrod;
+    text-align: center;
+    transition: all 200ms linear;
+    overflow: hidden;
+}
+
+.js-panel-close {
+    max-height: 0;
+}
+
+.panel h2 {
+  margin: 0;
+  padding: 3rem 0;
+}
+
+.circle {
+    height: 100px;
+    top: calc(50% - 50px);
+    width: 100px;
+    background-color: orange;
+    border-radius: 50%;
+}
+
+.js-circle-bounce {
+    animation: circle-bounce 1s linear;
+    -webkit-animation: circle-bounce 1s linear;
+}
+
+@-webkit-keyframes circle-bounce {
+    0% {
+        right: 30px; top: calc(50% - 20px);
+    }
+    
+    20% {
+        right: 60px; top: calc(50% - 50px);
+    }
+    
+    40% {
+        right: 90px; top: calc(50% - 30px);
+    }
+    
+    60% {
+        right: 120px; top: calc(50% - 50px);
+    }
+    
+    80% {
+        right: 150px; top: calc(50% - 30px);
+    }
+    
+    100% {
+        right: 180px; top: calc(50% - 50px);
+    }
+}
+
+@keyframes circle-bounce {
+    0% {
+        right: 30px; top: calc(50% - 20px);
+    }
+    
+    20% {
+        right: 60px; top: calc(50% - 50px);
+    }
+    
+    40% {
+        right: 90px; top: calc(50% - 30px);
+    }
+    
+    60% {
+        right: 120px; top: calc(50% - 50px);
+    }
+    
+    80% {
+        right: 150px; top: calc(50% - 30px);
+    }
+    
+    100% {
+        right: 180px; top: calc(50% - 50px);
+    }
+}
+
+.list {
+  bottom: 1em;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 250px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.list li {
+    padding: 0.5em;
+    background-color: plum;
+    border: 1px solid mediumpurple;
+    color: mediumpurple;
+    overflow: hidden;
+    opacity: 1;
+}
+
+.js-btn-append {
+    -webkit-animation: btn-append 1s linear;
+    animation: btn-append 1s linear;
+}
+
+@-webkit-keyframes btn-append {
+    0% {
+        max-height: 0;
+    }
+    
+    100% {
+        max-height: 2em;
+    }
+}
+
+@keyframes btn-append {
+    0% {
+        max-height: 0;
+    }
+    
+    100% {
+        max-height: 2em;
+    }
+}
